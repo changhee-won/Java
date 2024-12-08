@@ -8,6 +8,7 @@ import com.example.demo.repository.InfoRepository;
 import com.example.demo.repository.MasterRepository;
 
 import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,10 +17,10 @@ import java.util.stream.Collectors;
 @Service
 public class DataService {
 
-   
+    @Autowired
     private MasterRepository masterRepository;
 
-    
+    @Autowired
     private InfoRepository infoRepository;
 
     public List<Combined> getAllData() {
